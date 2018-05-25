@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- Dependencies -->
+    <link type="text/css" rel="stylesheet" href="./public/topScores.css" />
+    <link href="./public/navBar.css" rel="stylesheet" />
+    <link href="./public/app.js" rel="javascript" />
+    <link href="./public/404.html" rel="html" />
+</head>
+
+<body>
+
+    <!-- Sidebar navigation -->
+    <div class="sideNav">
+        <button class="sidNavButton" onclick="profileRedirect()">Profile</button>
+        <button class="sidNavButton" onclick="colorTestRedirect()">Color Blindness Test</button>
+        <button class="sidNavButton" onclick="hearingTestRedirect()">Hearing Age Test</button>
+        <button class="sidNavButton" onclick="topScoresRedirect()">Leaderboard</button>
+        <button class="sidNavBottomButton" onclick="logout()">Logout</button>
+    </div>
+
+
+    <!-- Top scores page content -->
+    <div class="pageStyles">
+        <div class="textBody">
+            <h1 class="textScores">Leaderboard</h1>
+
+            <div class="colorScoreBox">
+                <h1 class="textScoreType">Color Blindness Top 10 Scores</h1>
+                <ol type="1" id="colorLeaderboard" class="colorLeaderboard">Loading color blindness leaderboard please wait...</ol>
+            </div>
+
+            <div class="hearingScoreBox">
+                <h1 class="textScoreType">Hearing Top 10 Scores</h1>
+                <ol type="1" id="hearingLeaderboard" class="hearingLeaderboard">Loading hearing leaderboard please wait...</ol>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Given by Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDNs60mQkp79n5tflFVEc7ihH8Kr1ayXM4",
+            authDomain: "twosense-66771.firebaseapp.com",
+            databaseURL: "https://twosense-66771.firebaseio.com",
+            projectId: "twosense-66771",
+            storageBucket: "twosense-66771.appspot.com",
+            messagingSenderId: "1043280577170"
+        };
+        firebase.initializeApp(config);
+
+    </script>
+    <!-- End given code by Firebase -->
+
+    <script src="./public/app.js"> </script>
+
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- Dependencies -->
+    <link type="text/css" rel="stylesheet" href="./public/colorTest.css" />
+    <link href="./public/navBar.css" rel="stylesheet" />
+    <link href="./public/app.js" rel="javascript" />
+    <link href="./public/color.js" rel="javascript" />
+    <link href="./public/404.html" rel="html" />
+</head>
+
+<body>
+
+    <!-- Sidebar navigation -->
+    <div class="sideNav">
+        <button class="sidNavButton" onclick="profileRedirect()">Profile</button>
+        <button class="sidNavButton" onclick="colorTestRedirect()">Color Blindness Test</button>
+        <button class="sidNavButton" onload='colorPage' onclick="hearingTestRedirect();">Hearing Age Test</button>
+        <button class="sidNavButton" onclick="topScoresRedirect()">Leaderboard</button>
+        <button class="sidNavBottomButton" onclick="logout()">Logout</button>
+    </div>
+
+    <!-- Color-blindness test page content -->
+    <div class="pageStyles">
+        <div class="colorTestBox">
+            <!-- heading -->
+            <h1 class="textColor">TwoSense Color Blindness Test</h1>
+                <!-- testing html/CSS -->
+                <img src="./Tests/Colorblindness/1.png" id="colorImg" />
+
+                <h1 id="textBody" class="textBody">Please enter your answer below. If you do not see a number enter 'none'.</h1>
+                <div class="answerBoxInput">
+                    <input id="userAnswerIn" type="text" placeholder="Answer">
+                </div>
+                <button id="nextQButton" class="nextQButton" onclick="nextQuestion()">NEXT</button>
+
+                <!-- final score html/CSS -->
+                <h1 id="finalTextBody" class="textBodyLarge">You scored:</h1>
+                <h1 id="colorScore" class="textBodyLarge"></h1>
+
+                <button id="tryAgainButton" class="tryAgainButton" onclick="colorTestRedirect()">Try again</button>
+
+        </div>
+    </div>
+
+    <!-- Given by Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDNs60mQkp79n5tflFVEc7ihH8Kr1ayXM4",
+            authDomain: "twosense-66771.firebaseapp.com",
+            databaseURL: "https://twosense-66771.firebaseio.com",
+            projectId: "twosense-66771",
+            storageBucket: "twosense-66771.appspot.com",
+            messagingSenderId: "1043280577170"
+        };
+        firebase.initializeApp(config);
+
+    </script>
+    <!-- End given code by Firebase -->
+
+    <script src="./public/app.js"> </script>
+
+</body>
+
+</html>
