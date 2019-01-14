@@ -8,11 +8,6 @@ Access our site with this link: https://womalley.github.io/TwoSense/
 
 View a demo video with this link: https://youtu.be/mwlls0MWZzg
 
-# Team Members
-* Siddhesh Patil - patil33@purdue.edu
-* William O'Malley - womalley@purdue.edu
-* Adhitya Vadivel - avadivel@purdue.edu
-
 # Technologies
 * Backend/Database - Node.js and Firebase
 * Frontend - Javascript, Bootstrap, CSS, HTML5
